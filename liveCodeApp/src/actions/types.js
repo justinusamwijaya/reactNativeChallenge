@@ -1,0 +1,6 @@
+export const mark = 'mark'
+export const new_game = 'newGame'
+export const game_ends = 'gameEnds'
+export const game_lost = 'gameLost'
+export const game_won = 'gameWon'
+export const switch_turn = 'switchTurn'
