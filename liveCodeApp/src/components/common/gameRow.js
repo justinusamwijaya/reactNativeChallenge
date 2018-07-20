@@ -73,7 +73,9 @@ class Row extends Component {
         } else {
             return <UnMarkedPos onPress={()=>{ 
                 this.props.Mark( value, turn ) 
-                this.checkWinningCondition([...this.props.myPos, value],[...this.props.enemyPos, value])
+                let posMe = this.props.turn = 'myPositions' ? [...this.props.myPos, value] : [...this.props.myPos]
+                let posEn = this.props.turn = 'enemyPositions' ? [...this.props.enemyPos, value] : [...this.props.enemyPos]
+                this.checkWinningCondition(posMe,posEn)
             }}/>
         }
     }

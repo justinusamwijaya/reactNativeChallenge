@@ -34,6 +34,10 @@ export default (state = initialState, action) => {
             result: 'congrats! you won!'
         }
         case mark:
+        console.log({
+            ...state,
+            [action.payload.turn] : [...state[action.payload.turn], action.payload.guess]
+        })
         return {
             ...state,
             [action.payload.turn] : [...state[action.payload.turn], action.payload.guess]
